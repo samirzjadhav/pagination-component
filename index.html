@@ -51,4 +51,14 @@
       </button>
     </div>
   </body>
+  <script>
+    const pages = document.querySelectorAll(".page-link");
+
+    pages.forEach((page) =>
+      page.addEventListener("click", () => {
+        pages.forEach((page) => page.classList.remove("page-link--current"));
+        page.classList.toggle("page-link--current");
+      })
+    );
+  </script>
 </html>
